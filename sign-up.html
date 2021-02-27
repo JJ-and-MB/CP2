@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Sign-Up</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="sign-up.js"></script>
+    
+
+    <link rel="stylesheet" href="sign-up.css">
+    <link rel="stylesheet" href="generic.css">
+</head>
+
+<body>
+
+    <body>
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <!--Collapses the menu on small screens-->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                      </button>
+
+                    <!--Website Name-->
+                    <a class="navbar-brand" href="#">Twitch-erest</a>
+
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <!--NavBar Left of Search Bar-->
+                        <li><a href="index.html">Lobby</a></li>
+                        <li><a href="account.html">My Stuff</a></li><!--My Stuff-->
+                        <li class="active"><a href="#">Sign Up</a></li><!--Friends-->
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-left" action="/action_page.php">
+                        <!--Search Bar and Search Button-->
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search" name="search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><!--Search Button - Uses Search Symbol-->
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                            </div>
+                        </div>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <!--NavBar Right of Search Bar-->
+                        <li>
+                            <a href="#" class="glyphicon glyphicon-envelope"></a>
+                            <!--Mail Symbol for messages-->
+                        </li>
+                        <li>
+                            <a href="#" class="glyphicon glyphicon-bell"></a>
+                            <!--Bell Symbol for notifications-->
+                            <li class="dropdown">
+                                <!--Dropdown Profile-->
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Settings</a></li>
+                                    <li><a href="#">Get Help</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="sign-up.html">Log In</a></li>
+                                </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <div class= "signUpPage">
+        <div class="sign-up_title">
+                <p>Welcome to Twitch-erest</p>
+        </div>
+        <div class="example-characters">
+            <div class="example-character">
+                <img src="images/vision.PNG" height="50px" width="50px"></img>
+                <h3><a onclick="getVision()" id="vision-link" href="#display-character">Vision</a></h3>
+            </div>
+            <div class="example-character">
+                <img src="images/ironman.PNG" height="50px" width="50px"></img>
+                <h3><a onclick="getIronMan()" id="ironMan-link" href="#display-character">Iron Man</a></h3>
+            </div>
+            <div class="example-character">
+                <img src="images/hulk.PNG" height="50px" width="50px"></img>
+                <h3><a onclick="getHulk()" id="hulk-link" href="#display-character">Hulk</a></h3>
+            </div>
+            <div class="example-character">
+                <img src="images/thanos.PNG" height="50px" width="50px"></img>
+                <h3><a onclick="getThanos()" id="thanos-link" href="#display-character">Thanos</a></h3>
+            </div>
+            <div class="example-character">
+                <img src="images/spiderman.PNG" height="50px" width="50px"></img>
+                <h3><a onclick="getSpider()" id="spider-link" href="#display-character">Spider-Man</a></h3>
+            </div>
+        </div>
+        <div class= "example-characters">
+            <div class="example-character">
+                <img src="images/thing.png" height="50px" width="50px"></img>
+                <h3><a onclick="getThing()" id="thing-link" href="#display-character">The Thing</a></h3>
+            </div>
+            <div class="example-character">
+                <img src="images/falcon.png" height="50px" width="50px"></img>
+                <h3><a onclick="getFalcon()" id="falcon-link" href="#display-character">Falcon</a></h3>
+            </div>
+            <div class="example-character">
+                <img src="images/captainamerica.png" height="50px" width="50px"></img>
+                <h3><a onclick="getCaptainAmerica()" id="captainAmerica-link" href="#display-character">Captain America</a></h3>
+            </div>
+            <div class="example-character">
+                <img src="images/thor.png" height="50px" width="50px"></img>
+                <h3><a onclick="getThor()" id="thor-link" href="#display-character">Thor</a></h3>
+            </div>
+            <div class="example-character">
+                <img src="images/wolverine.png" height="50px" width="50px"></img>
+                <h3><a onclick="getWolverine()" id="wolverine-link" href="#display-character">Wolverine</a></h3>
+            </div>
+        </div>
+        <div class="displayCharacterHolder">
+            <div class="displayCharacter" id="display-character">
+                
+            </div>
+        </div>
+        <div class= "comics">
+            <div class= "search">
+                  <h1>Search to find Content of your Favorite marvel character!</h1> <br>
+    		      <form>
+      			     <input id="characterInput" type="text" placeholder="Ex. Vision, Thing, Thanos, Spider-man, Thor"><br>
+      			     <input id="character-search" type="submit" value="Search">
+    			  </form>
+            </div>
+    	    <div id="comicResults" class="comicResults">
+    	        
+    	    </div>
+        </div>
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        
+        <div class="sign-up_cover">
+            <div class="form-title">
+                <p>Sign Up Today!</p>
+            </div>
+            <div class="sign-up_form">
+                <form action="/action_page.php">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <br>
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    <br>
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                      <option value="australia">Australia</option>
+                      <option value="canada">Canada</option>
+                      <option value="usa">USA</option>
+                    </select>
+      
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    </body>
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">© 2021 Twitch-erest</p>
+        <ul class="list-inline">
+            
+            <li class="list-inline-item">John Stevens</li>
+            <li class="list-inline-item">Michael Barney</li>
+            
+        </ul>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Privacy</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Support</a></li>
+          <li class="list-inline-item"><a href="https://www.github.com/TheCodeEaters/CP1">GitHub</a></li>
+        </ul>
+    </footer>
+</html>
